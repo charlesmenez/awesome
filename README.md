@@ -4,9 +4,6 @@
   <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">
     <img alt="License: GPL--3.0" src="https://img.shields.io/badge/License-GPL--3.0-yellow.svg" />
   </a>
-  <a href="https://twitter.com/_fuckthisheart" target="_blank">
-    <img alt="Twitter: _fuckthisheart" src="https://img.shields.io/twitter/follow/_fuckthisheart.svg?style=social" />
-  </a>
 </p>
 
 <br />
