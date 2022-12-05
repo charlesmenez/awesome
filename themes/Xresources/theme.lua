@@ -15,7 +15,7 @@ local theme = dofile(themes_path .. "default/theme.lua")
 theme.wallpaper = "~/custom.jpg"
 -- load vector assets' generators for this theme
 
-theme.font = "fontawesome 7"
+theme.font = "jetbrains 7"
 
 theme.bg_normal   = xrdb.background
 theme.bg_focus    = theme.bg_normal
