@@ -244,29 +244,34 @@ globalkeys = gears.table.join(
     { description = "show help", group = "awesome" }),
 
   awful.key({ modkey, }, "d", function()
-    awful.util.spawn("dmenu_run -nb black -nf white -sb white -sf black -fn hack:size=8")
+    awful.util.spawn("dmenu_run")
   end,
     { description = "run dmenu", group = "launcher" }),
+
+  awful.key({ modkey, }, "r", function()
+    awful.util.spawn("alacritty -e ranger")
+  end,
+    { description = "run ranger", group = "launcher" }),
+
+  awful.key({ modkey, }, "e", function()
+    awful.util.spawn("alacritty -e lvim")
+  end,
+    { description = "run lvim", group = "launcher" }),
+
+  awful.key({ modkey, "Shift" }, "e", function()
+    awful.util.spawn("dmenu-emoji")
+  end,
+    { description = "run dmenu-emoji picker", group = "launcher" }),
 
   awful.key({ modkey, }, "w", function()
     awful.util.spawn("firefox-bin")
   end,
     { description = "run firefox", group = "launcher" }),
 
-  awful.key({ modkey, "Control" }, "t", function()
-    awful.util.spawn("alacritty -e tuifeed")
-  end,
-    { description = "run rssfeed", group = "launcher" }),
-
   awful.key({ modkey, "Control" }, "s", function()
     awful.util.spawn("Dmenu-Streaming")
   end,
     { description = "run dmenu-streaming", group = "launcher" }),
-
-  awful.key({ modkey, "Control" }, "y", function()
-    awful.util.spawn("yt-downloader-dmenu")
-  end,
-    { description = "run youtube-downloader", group = "launcher" }),
 
   awful.key({ modkey, "Shift" }, "m", function()
     awful.util.spawn("alacritty -e termusic")
@@ -296,7 +301,7 @@ globalkeys = gears.table.join(
   awful.key({ modkey, "Shift" }, "Return", function()
     awful.util.spawn("alacritty -e pulsemixer")
   end,
-    { description = "run cmixer", group = "launcher" }),
+    { description = "run pulsemixer", group = "launcher" }),
 
   awful.key({ modkey, "Shift" }, "t", function()
     awful.util.spawn("alacritty -e arigram")
@@ -388,8 +393,8 @@ globalkeys = gears.table.join(
     { description = "restore minimized", group = "client" }),
 
   -- Prompt
-  awful.key({ modkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
-    { description = "run prompt", group = "launcher" }),
+  --  awful.key({ modkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
+  --{ description = "run prompt", group = "launcher" }),
 
   awful.key({ modkey }, "x",
     function()
