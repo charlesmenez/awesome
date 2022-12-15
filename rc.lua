@@ -248,6 +248,11 @@ globalkeys = gears.table.join(
   end,
     { description = "run dmenu", group = "launcher" }),
 
+  awful.key({ modkey, }, "c", function()
+    awful.util.spawn("awesome-theme")
+  end,
+    { description = "run awesome-theme", group = "launcher" }),
+
   awful.key({ modkey, }, "r", function()
     awful.util.spawn("alacritty -e ranger")
   end,
@@ -292,6 +297,11 @@ globalkeys = gears.table.join(
     awful.util.spawn("ytfzf -D")
   end,
     { description = "run youtube video search", group = "launcher" }),
+
+  awful.key({ modkey, "Control" }, "y", function()
+    awful.util.spawn("mpv-clip")
+  end,
+    { description = "run youtube clipboard", group = "launcher" }),
 
   awful.key({ modkey, "Shift" }, "o", function()
     awful.util.spawn("ytfzf -cO -D")
