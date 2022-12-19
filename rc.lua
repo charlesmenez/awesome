@@ -72,7 +72,7 @@ awful.layout.layouts = {
   --awful.layout.suit.tile.top,
   --awful.layout.suit.fair,
   --awful.layout.suit.fair.horizontal,
-  --awful.layout.suit.spiral,
+  awful.layout.suit.spiral,
   --awful.layout.suit.max,
   --awful.layout.suit.max.fullscreen,
   --awful.layout.suit.magnifier,
@@ -662,11 +662,9 @@ client.connect_signal("manage", function(c)
   end
 end)
 -- autostart apps
-awful.spawn.with_shell("picom -b --experimental-backends")
 awful.spawn.with_shell("xset -dpms")
 awful.spawn.with_shell("xset s off")
 awful.spawn.with_shell("xrandr --dpi 96")
-awful.spawn.with_shell("setxkbmap br")
 --- Enable for lower memory consumption
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
