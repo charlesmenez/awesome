@@ -52,8 +52,8 @@ end
 beautiful.init("/home/charles/.config/awesome/themes/Xresources/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
-editor = os.getenv("EDITOR") or "vi"
+terminal = "st"
+editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -254,12 +254,12 @@ globalkeys = gears.table.join(
     { description = "run awesome-theme", group = "launcher" }),
 
   awful.key({ modkey, }, "r", function()
-    awful.util.spawn("alacritty -e ranger")
+    awful.util.spawn(terminal .. " -e ranger")
   end,
     { description = "run ranger", group = "launcher" }),
 
   awful.key({ modkey, }, "e", function()
-    awful.util.spawn("alacritty -e lvim")
+    awful.util.spawn(terminal .. " -e lvim")
   end,
     { description = "run lvim", group = "launcher" }),
 
@@ -279,7 +279,7 @@ globalkeys = gears.table.join(
     { description = "run dmenu-streaming", group = "launcher" }),
 
   awful.key({ modkey, "Shift" }, "m", function()
-    awful.util.spawn("alacritty -e termusic")
+    awful.util.spawn(terminal .. " -e termusic")
   end,
     { description = "run termusic", group = "launcher" }),
 
@@ -309,12 +309,12 @@ globalkeys = gears.table.join(
     { description = "run youtube video search", group = "launcher" }),
 
   awful.key({ modkey, "Shift" }, "Return", function()
-    awful.util.spawn("alacritty -e pulsemixer")
+    awful.util.spawn(terminal .. " -e pulsemixer")
   end,
     { description = "run pulsemixer", group = "launcher" }),
 
   awful.key({ modkey, "Shift" }, "t", function()
-    awful.util.spawn("alacritty -e arigram")
+    awful.util.spawn(terminal .. " -e arigram")
   end,
     { description = "run telegram-cli", group = "launcher" }),
 
@@ -584,8 +584,6 @@ awful.rules.rules = {
     properties = { floating = true, ontop = true, width = 364, height = 205, x = 924, y = 495, skip_taskbar = true,
       tags = { "1 ", "2 ", "3 ", "4 ", "5 " }, focus = false } },
 
-  --  { rule = { class = "Alacritty" },
-  --    properties = { tags = { " " } } },
 }
 -- }}}
 
