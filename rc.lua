@@ -172,7 +172,7 @@ awful.screen.connect_for_each_screen(function(s)
   set_wallpaper(s)
 
   -- Each screen has its own tag table.
-  awful.tag({ "1 ", "2 ", "3 ", "4 ", "5 ", "6 " }, s, awful.layout.layouts[1])
+  awful.tag({ " ", " ", " ", " ", " ", " " }, s, awful.layout.layouts[1])
   -- Create a promptbox for each screen
   s.mypromptbox = awful.widget.prompt()
   -- Create an imagebox widget which will contain an icon indicating which layout we're using.
@@ -269,7 +269,7 @@ globalkeys = gears.table.join(
     { description = "run dmenu-emoji picker", group = "launcher" }),
 
   awful.key({ modkey, }, "w", function()
-    awful.util.spawn("firefox-bin")
+    awful.util.spawn("firefox")
   end,
     { description = "run firefox", group = "launcher" }),
 
@@ -575,7 +575,25 @@ awful.rules.rules = {
   },
 
   { rule = { class = "firefox" },
-    properties = { tag = "1 " } },
+    properties = { tag = " " } },
+
+  { rule = { class = "St" },
+    properties = { tag = " " } },
+
+  { rule = { class = "dolphin" },
+    properties = { tag = " " } },
+
+  { rule = { class = "mpv" },
+    properties = { tag = " " } },
+
+    { rule = { class = "heroic" },
+    properties = { tag = " " } },
+
+    { rule = { class = "steam" },
+    properties = { tag = " " } },
+
+    { rule = { class = "openrgb" },
+    properties = { tag = " " } },
 
   --  { rule = { class = "feh" },
   --    properties = { fullscreen = true } },
@@ -662,7 +680,8 @@ end)
 -- autostart apps
 awful.spawn.with_shell("xset -dpms")
 awful.spawn.with_shell("xset s off")
-awful.spawn.with_shell("xrandr --dpi 96")
+--awful.spawn.with_shell("openrgb")
+--awful.spawn.with_shell("xrandr --dpi 96")
 --- Enable for lower memory consumption
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)

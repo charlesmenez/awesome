@@ -15,7 +15,7 @@ local theme = dofile(themes_path .. "default/theme.lua")
 theme.wallpaper = "~/custom.jpg"
 -- load vector assets' generators for this theme
 
-theme.font = "jetbrains 7"
+theme.font = "SauceCodePro 10"
 
 theme.bg_normal   = xrdb.background
 theme.bg_focus    = theme.bg_normal
@@ -105,7 +105,7 @@ theme.awesome_icon = theme_assets.awesome_icon(
 )
 
 -- Generate taglist squares:
-local taglist_square_size = dpi(4)
+local taglist_square_size = dpi(5)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
     taglist_square_size, theme.fg_normal
 )
